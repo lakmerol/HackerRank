@@ -29,12 +29,12 @@ namespace Answer
 
             }
 
-            decimal NegatifRate = Math.Round(n / arr.Count, 5);
-            decimal PosittiveRate = Math.Round(p / arr.Count, 5);
-            decimal Zero = Math.Round(z / arr.Count, 5);
+            decimal NegatifRate = Math.Round(n / arr.Count, 6);
+            decimal PosittiveRate = Math.Round(p / arr.Count, 6);
+            decimal Zero = Math.Round(z / arr.Count, 6);
+            result.Add(PosittiveRate);
             result.Add(NegatifRate);
             result.Add(Zero);
-            result.Add(PosittiveRate);
             return result;
         }
 
