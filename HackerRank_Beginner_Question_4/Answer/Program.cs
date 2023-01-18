@@ -3,7 +3,7 @@
 
 using System.Collections;
 
-ArrayList MinMax(List<int> list)
+ArrayList MinMax(List<Int64> list)
 {
     list.Sort();
     Int64 min = Convert.ToInt64(list[0] + list[1] + list[2] + list[3]);
@@ -14,13 +14,13 @@ ArrayList MinMax(List<int> list)
     return arrayList;
 }
 
-List<int> vs = new List<int>()
+List<Int64> vs = new List<Int64>()
 {
 
-256741038, 623958417, 467905213, 714532089, 938071625
+140638725, 436257910, 953274816, 734065819, 362748590
 
 };
 MinMax(vs);
 Console.WriteLine(MinMax(vs)[0]);
-Console.WriteLine(MinMax(vs)[1]);
+Console.WriteLine(MinMax(vs)[0]);
 Console.ReadLine();
