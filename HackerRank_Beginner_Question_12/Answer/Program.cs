@@ -24,7 +24,7 @@
 
 List<int> ts = new List<int>()
 {
-    1, 2 ,3 ,4 ,5, 4 ,3 ,2 ,1, 3, 4
+    1, 2 ,3 ,4 ,5, 4 ,3 ,2 ,1, 3, 4,1
 };
 int result = migratoryBirds(ts);
 Console.WriteLine(result);
