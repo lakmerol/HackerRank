@@ -1,45 +1,52 @@
-An avid hiker keeps meticulous records of their hikes. During the last hike that took exactly  steps, for every step it was noted if it was an uphill, , or a downhill,  step. Hikes always start and end at sea level, and each step up or down represents a  unit change in altitude. We define the following terms:
-
-A mountain is a sequence of consecutive steps above sea level, starting with a step up from sea level and ending with a step down to sea level.
-A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level.
-Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
+A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a give budget. Given price lists for keyboards and USB drives and a budget, find the cost to buy them. If it is not possible to buy both items, return .
 
 Example
 
- 
 
-The hiker first enters a valley  units deep. Then they climb out and up onto a mountain  units high. Finally, the hiker returns to sea level and ends the hike.
+
+The person can buy a , or a . Choose the latter as the more expensive option and return .
 
 Function Description
 
-Complete the countingValleys function in the editor below.
+Complete the getMoneySpent function in the editor below.
 
-countingValleys has the following parameter(s):
+getMoneySpent has the following parameter(s):
 
-int steps: the number of steps on the hike
-string path: a string describing the path
+int keyboards[n]: the keyboard prices
+int drives[m]: the drive prices
+int b: the budget
 Returns
 
-int: the number of valleys traversed
+int: the maximum that can be spent, or  if it is not possible to buy both items
 Input Format
 
-The first line contains an integer , the number of steps in the hike.
-The second line contains a single string , of  characters that describe the path.
+The first line contains three space-separated integers , , and , the budget, the number of keyboard models and the number of USB drive models.
+The second line contains  space-separated integers , the prices of each keyboard model.
+The third line contains  space-separated integers , the prices of the USB drives.
 
 Constraints
 
-Sample Input
+The price of each item is in the inclusive range .
+Sample Input 0
 
-8
-UDDDUDUU
-Sample Output
+10 2 3
+3 1
+5 2 8
+Sample Output 0
 
-1
-Explanation
+9
+Explanation 0
 
-If we represent _ as sea level, a step up as /, and a step down as \, the hike can be drawn as:
+Buy the  keyboard and the  USB drive for a total cost of .
 
-_/\      _
-   \    /
-    \/\/
-The hiker enters and leaves one valley.
+Sample Input 1
+
+5 1 1
+4
+5
+Sample Output 1
+
+-1
+Explanation 1
+
+There is no way to buy one keyboard and one USB drive because , so return .
